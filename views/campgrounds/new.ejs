@@ -1,4 +1,4 @@
-<% include partials/header %>
+<% include ../partials/header %>
 <div class="container">
     <div class="row">
         <h1 style="text-align: center">Create a New Campground</h1>
@@ -6,6 +6,9 @@
             <form action="/campgrounds" method="POST">
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="price" placeholder="price" min="0.01" step="0.01">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="image" placeholder="image url">
@@ -21,4 +24,4 @@
         </div>
     </div>
 </div>
-<% include partials/footer %>
+<% include ../partials/footer %>
