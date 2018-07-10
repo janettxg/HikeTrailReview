@@ -13,7 +13,6 @@
             <div class="thumbnail">
                 <img class="img-responsive" src="<%= trail.image %>">
                 <div class="caption-full">
-                    <h4 class="pull-right">$<%= trail.price %>/night</h4>
                     <h4><a><%=trail.name%></a></h4>
                     <p><%= trail.description %></p>
                     <p>
@@ -29,7 +28,7 @@
             </div>
             <div class="well">
                 <div class="text-right">
-                    <a class="btn btn-success" href="/trails/<%= trail._id %>/trails/new">Add New Comment</a>
+                    <a class="btn btn-success" href="/trails/<%= trail._id %>/comments/new">Add New Comment</a>
                 </div>
                 <hr>
                 <% trail.comments.forEach(function(comment){ %>

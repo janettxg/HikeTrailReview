@@ -20,14 +20,13 @@ router.get("/", function(req, res){
 router.post("/", middleware.isLoggedIn, function(req, res){
     // get data from form and add to trails array
     var name = req.body.name;
-    var price = req.body.price;
     var image = req.body.image;
     var desc = req.body.description;
     var author = {
         id: req.user._id,
         username: req.user.username
     };
-    var newTrail = {name: name, price: price, image: image, description: desc, author:author};
+    var newTrail = {name: name, image: image, description: desc, author:author};
     // Create a new trail and save to DB
     Trail.create(newTrail, function(err, newlyCreated){
         if(err){
