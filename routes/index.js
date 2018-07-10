@@ -22,7 +22,7 @@ router.post("/register", function(req, res){
             return res.render("register");
         }
         passport.authenticate("local")(req, res, function(){
-            req.flash("success", "Welcome to HikeTrailReview " + user.username);
+            req.flash("success", "Welcome to Hiking Trail Review " + user.username);
            res.redirect("/trails"); 
         });
     });
