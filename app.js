@@ -6,19 +6,18 @@ var express         = require("express"),
     passport        = require("passport"),
     LocalStrategy   = require("passport-local"),
     methodOverride  = require("method-override"),
-    Campground      = require("./models/campground"),
+    Trail           = require("./models/trail"),
     Comment         = require("./models/comment"),
     User            = require("./models/user"),
     seedDB          = require("./seeds")
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
+    trailRoutes      = require("./routes/trails"),
     indexRoutes      = require("./routes/index");
     
-    
-mongoose.connect(process.env.DATABASEURL);
-// mongoose.connect("mongodb://janettxg:westworld1@ds121321.mlab.com:21321/yelpcampxjanettxg");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12deployed"
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -47,10 +46,10 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/trails", trailRoutes);
+app.use("/trails/:id/comments", commentRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+   console.log("The hiketrailreview Server Has Started!");
 });
