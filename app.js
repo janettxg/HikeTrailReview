@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     trailRoutes      = require("./routes/trails"),
     indexRoutes      = require("./routes/index");
     
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12deployed"
+var url = process.env.DATABASEURL || "mongodb://localhost:27017";
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -52,4 +52,5 @@ app.use("/trails/:id/comments", commentRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The hiketrailreview Server Has Started!");
+   console.log("port:" + process.env.PORT);
 });
