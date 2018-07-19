@@ -17,6 +17,9 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index");
     
 var url = process.env.DATABASE_URL || "mongodb://localhost:27017";
+
+console.log('url: ' + url);
+
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
