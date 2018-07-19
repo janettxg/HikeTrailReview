@@ -18,8 +18,6 @@ var commentRoutes    = require("./routes/comments"),
     
 var url = process.env.DATABASE_URL || "mongodb://localhost:27017";
 
-console.log('url: ' + url);
-
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -27,7 +25,10 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-seedDB(); //seed the database
+
+if (!process.env.DATABASE_URL) {
+    seedDB(); //seed the database
+}
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
