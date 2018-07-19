@@ -1,15 +1,10 @@
 <% include ../partials/header %>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <p class="lead">Hiking Trail Review</p>
-            <div class="list-group">
-                <li class="list-group-item active">Info 1</li>
-                <li class="list-group-item">Info 2</li>
-                <li class="list-group-item">Info 3</li>
-            </div>
+        <div class="col-md-6 view-trail">
+            <a href="../trails"> <i class="fas fa-arrow-left fa"></i><strong> View all Trails</strong></a>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="thumbnail">
                 <img class="img-responsive" src="<%= trail.image %>">
                 <div class="caption-full">
@@ -28,7 +23,7 @@
             </div>
             <div class="well">
                 <div class="text-right">
-                    <a class="btn btn-success" href="/trails/<%= trail._id %>/comments/new">Add New Comment</a>
+                    <a class="btn btn-info" href="/trails/<%= trail._id %>/comments/new">Add New Comment</a>
                 </div>
                 <hr>
                 <% trail.comments.forEach(function(comment){ %>

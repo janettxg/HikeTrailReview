@@ -3,11 +3,11 @@
     <head>
         <title>Hiking Trail Review</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link rel="stylesheet" href="/stylesheets/landing.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
     </head>
     <body>
-    
     <div class="container">
         <% if(error && error.length > 0){ %>
             <div class="alert alert-danger" role="alert">
@@ -22,8 +22,9 @@
     </div>
     
     <div id="landing-header">
- 		<h1>Welcome to Hiking Trail Review!</h1>
-		<a href="/trails" class="btn btn-lg btn-success">View All trails</a>
+         <h1>Welcome to Hiking Trail Review</h1>
+         <p class="sub-header">Explore hiking trails around the world</p>
+		<a href="/trails" class="btn btn-lg btn-info">View All trails <i class="fas fa-tree"></i></a>
     </div>
     
     <ul class="slideshow">

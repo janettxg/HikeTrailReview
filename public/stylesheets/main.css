@@ -1,3 +1,32 @@
+.navbar-custom {
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0;
+    border-bottom: 1px #e7e7e7 solid;
+    color: black;
+}
+.navbar-custom a{
+    color: gray;
+}
+.logo {
+    height: 180px; 
+}
+.btn-space {
+    margin-bottom: 20px;
+}
+.caption {
+    position: absolute;
+    left: 24px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 4px 8px;
+    color: white;
+    margin: 0;
+    font: 14px Sans-Serif;
+}
+.caption > h4 {
+    color: white;
+}
 .thumbnail img {
     width: 100%;
 }
@@ -12,4 +41,9 @@
 
 #delete-form {
     display: inline;
+}
+
+.view-trail {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
