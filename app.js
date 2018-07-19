@@ -53,11 +53,11 @@ app.use("/", indexRoutes);
 app.use("/trails", trailRoutes);
 app.use("/trails/:id/comments", commentRoutes);
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
-app.listen(port, process.env.IP, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The Hiking Trail Review Server Has Started!");
-   console.log("port:" + process.env.IP);
+   console.log("port:" + port);
 });
 
 
